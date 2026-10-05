@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Portfolio</title>
+
+    <style>
+
+        /* Page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+
+        /* Heading */
+        h1 {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin: 0;
+            text-align: center;
+            animation: slideDown 1s;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px gray;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: blue;
+            border-bottom: 2px solid blue;
+            padding-bottom: 5px;
+        }
+
+        /* Profile */
+        .profile {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .profile img {
+            width: 200px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #333;
+            box-shadow: 0 5px 15px gray;
+            transition: 0.4s;
+        }
+
+        .profile img:hover {
+            transform: scale(1.08);
+            border-color: blue;
+        }
+
+        /* Grid Layout */
+        .content {
+            width: 85%;
+            margin: 30px auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+        /* Boxes */
+        .box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+
+            box-shadow: 0 3px 8px gray;
+
+            border: 2px solid transparent;
+
+            transition: 0.4s;
+
+            animation: fadeIn 1s;
+        }
+
+        /* Box Hover */
+        .box:hover {
+            transform: scale(1.05);
+            border: 2px solid blue;
+            box-shadow: 0 8px 20px gray;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Contact box */
+        #contact-box {
+            grid-column: span 2;
+        }
+
+        /* Simple Animation */
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            #contact-box {
+                grid-column: span 1;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>My Portfolio</h1>
+
+    <nav>
+        <strong>
+            <a href="#name">Name</a> |
+            <a href="#college">College</a> |
+            <a href="#department">Department</a> |
+            <a href="#skills">Skills</a> |
+            <a href="#hobbies">Hobbies</a> |
+            <a href="#contact">Contact</a>
+        </strong>
+    </nav>
+
+    <!-- Profile -->
+    <div class="profile">
+        <img src="sankar.jpeg.jpeg">
+    </div>
+
+    <!-- Grid Content -->
+    <div class="content">
+
+        <div class="box">
+            <h2 id="name">Name</h2>
+            <p>Shankar Kumar</p>
+        </div>
+
+        <div class="box">
+            <h2 id="college">College</h2>
+            <p>Sri Saraswathi Theyagaraja College - Pollachi</p>
+        </div>
+
+        <div class="box">
+            <h2 id="department">Department</h2>
+            <p>MCA - 1st Year</p>
+        </div>
+
+        <div class="box">
+            <h2 id="skills">Skills</h2>
+            <p>HTML, CSS, JAVA, C++</p>
+        </div>
+
+        <div class="box">
+            <h2 id="hobbies">Hobbies</h2>
+            <p>Editing, Learning New Technologies</p>
+        </div>
+
+        <div class="box" id="contact-box">
+            <h2 id="contact">Contact</h2>
+            <p>Mail ID: shankarkumar085898@gmail.com</p>
+            <p>Number: 7708603292</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
